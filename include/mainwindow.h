@@ -186,7 +186,6 @@ private:
     void applyDarkTheme();
     void applyLightTheme();
     void setButtonStyles();
-    void applyButtonStyles();
     
     // Expression handling
     void appendToExpression(const QString &text);
@@ -197,14 +196,11 @@ private:
     void clearEntry();
     void backspace();
     void calculate();
-    void evaluateSimpleExpression();
     
     // History management
     void addToHistory(const QString &expression, const QString &result, bool isError = false);
     void clearHistory();
     void updateHistoryDisplay();
-    void loadHistoryFromSettings();
-    void saveHistoryToSettings();
     
     // Memory management
     void updateMemoryDisplay();
@@ -217,7 +213,6 @@ private:
     void setDisplayText(const QString &text);
     QString getDisplayText() const;
     QString formatNumber(double number) const;
-    void updateExpressionPreview();
     
     // Keyboard handling
     void handleKeyboardInput(int key, const QString &text);
@@ -231,10 +226,6 @@ private:
     // UI toggles
     void toggleScientificMode();
     void toggleHistory();
-    
-    // Animation effects
-    void animateButton(QPushButton *button);
-    void flashDisplay();
 };
 
 #endif // MAINWINDOW_H

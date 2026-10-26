@@ -89,7 +89,7 @@ Visual indicator shows when memory contains a value.
 - Timestamps for each entry
 - Click history item to reuse result
 - Clear history button
-- Persistent across sessions
+- Session-only history (cleared on exit)
 
 ### Keyboard Shortcuts
 

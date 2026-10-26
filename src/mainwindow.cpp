@@ -90,7 +90,7 @@ void MainWindow::connectSignals()
             this, &MainWindow::on_btnClearHistory_clicked);
     connect(ui->historyList, &QListWidget::clicked, 
             this, &MainWindow::on_historyItemClicked);
-    connect(ui->historyList, &QListWidget::itemDoubleClicked,
+    connect(ui->historyList, &QListWidget::doubleClicked,
             this, &MainWindow::on_historyItemClicked);
     
     connect(ui->btnToggleTheme, &QPushButton::clicked, 
@@ -362,7 +362,7 @@ void MainWindow::appendFunction(const QString &func)
         m_waitingForOperand = false;
     } else {
         if (!m_currentExpression.isEmpty() && 
-            (m_currentExpression.right(1).isDigit() || 
+            (m_currentExpression.right(1)[0].isDigit() || 
              m_currentExpression.right(1) == ")")) {
             m_currentExpression += "*";
         }
@@ -558,26 +558,17 @@ void MainWindow::handleKeyboardInput(int key, const QString &text)
         return;
     }
     
-    if (key >= Qt::Key_Pad0 && key <= Qt::Key_Pad9) {
-        appendNumber(QString::number(key - Qt::Key_Pad0));
-        return;
-    }
-    
     switch (key) {
     case Qt::Key_Plus:
-    case Qt::Key_PadPlus:
         on_btnPlus_clicked();
         break;
     case Qt::Key_Minus:
-    case Qt::Key_PadMinus:
         on_btnMinus_clicked();
         break;
     case Qt::Key_Asterisk:
-    case Qt::Key_PadMultiply:
         on_btnMultiply_clicked();
         break;
     case Qt::Key_Slash:
-    case Qt::Key_PadDivide:
         on_btnDivide_clicked();
         break;
     case Qt::Key_AsciiCircum:
@@ -594,12 +585,10 @@ void MainWindow::handleKeyboardInput(int key, const QString &text)
         on_btnParenClose_clicked();
         break;
     case Qt::Key_Period:
-    case Qt::Key_PadDecimal:
         on_btnDecimal_clicked();
         break;
     case Qt::Key_Enter:
     case Qt::Key_Return:
-    case Qt::Key_PadEnter:
         on_btnEqual_clicked();
         break;
     case Qt::Key_Backspace:

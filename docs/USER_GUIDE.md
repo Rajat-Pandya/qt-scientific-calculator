@@ -197,6 +197,5 @@ Settings are automatically saved and include:
 - Scientific mode visibility
 - History panel visibility
 - Memory value
-- Calculation history
 
-Settings are stored using QSettings and persist between sessions.
+Settings are stored using QSettings and persist between sessions (calculation history remains session-only).

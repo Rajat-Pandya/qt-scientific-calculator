@@ -204,7 +204,7 @@ Identifier := Letter+
 
 ### Integration Tests
 - End-to-end calculations
-- History persistence
+- History display (session-only)
 - Settings save/load
 
 ### Manual Testing
