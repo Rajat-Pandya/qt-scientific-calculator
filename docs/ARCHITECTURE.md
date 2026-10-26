@@ -192,12 +192,15 @@ Identifier := Letter+
 
 ## Testing Strategy
 
-### Unit Tests (Recommended)
+### Unit Tests (Implemented in tests/ via QTestLib)
 - ExpressionParser tests
-  - Valid expressions
-  - Invalid expressions
-  - Edge cases (division by zero)
-- MainWindow tests
+  - Valid expressions and operator precedence
+  - Right-associative exponentiation
+  - Scientific functions (sin, cos, tan, log, ln, sqrt, fact)
+  - Mathematical constants (pi, e)
+  - Edge cases and domain errors (division by zero, negative sqrt, non-positive log, factorial limits)
+  - Unbalanced parentheses, unknown tokens, empty inputs
+- MainWindow tests (future integration)
   - Button clicks
   - Keyboard input
   - Theme switching

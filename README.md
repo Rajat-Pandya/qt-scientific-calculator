@@ -1,8 +1,10 @@
 # Scientific Calculator
 
+<!--
 <p align="center">
   <img src="screenshots/calculator_icon.png" alt="Calculator Icon" width="128">
 </p>
+-->
 
 <p align="center">
   <b>A professional-grade scientific calculator built with Qt6 and C++</b>
@@ -147,6 +149,9 @@ Calculator/
 │   └── expressionparser.h        # Parser declarations
 ├── ui/                           # UI files
 │   └── mainwindow.ui             # Qt Designer layout
+├── tests/                        # Unit tests (QTestLib)
+│   ├── tests.pro                 # Test project file
+│   └── tst_expressionparser.cpp  # ExpressionParser unit tests
 ├── screenshots/                  # Application screenshots
 ├── docs/                         # Documentation
 ├── Calculator.pro                # Qt project file
@@ -216,6 +221,36 @@ make
 1. Open `Calculator.pro` in Qt Creator
 2. Configure project with your kit
 3. Build (Ctrl+B) and Run (Ctrl+R)
+
+---
+
+## Testing
+
+The project includes an automated unit test suite using Qt's `QTestLib` framework covering expression parsing, operator precedence, scientific functions, and boundary error handling.
+
+### Building and Running Tests
+
+#### Windows (MinGW)
+```bash
+mkdir build-tests
+cd build-tests
+qmake ../tests/tests.pro
+mingw32-make
+./release/tst_expressionparser.exe
+```
+
+#### Linux / macOS
+```bash
+mkdir build-tests
+cd build-tests
+qmake ../tests/tests.pro
+make
+./tst_expressionparser
+```
+
+#### Qt Creator
+1. Open `tests/tests.pro` in Qt Creator.
+2. Build and run (`Ctrl+R`). Test results will appear in the Application Output pane.
 
 ---
 
@@ -299,6 +334,7 @@ The application gracefully handles:
 
 ---
 
+<!--
 ## Screenshots
 
 <p align="center">
@@ -318,6 +354,18 @@ The application gracefully handles:
 <p align="center">
   <i>Scientific functions and calculation history</i>
 </p>
+-->
+
+---
+
+## Known Limitations
+
+- **No Implicit Multiplication**: Expressions such as `2(3)` or `5sin(30)` require explicit multiplication operators (e.g., `2*(3)` or `5*sin(30)`).
+- **Compound Sign Toggle**: The `+/-` button performs direct string/number negation on the active input and does not parse compound subexpressions.
+- **Decimal Constant Expansions**: The `pi` and `e` buttons insert raw floating-point string expansions (`3.14159...` and `2.71828...`) into the input buffer instead of symbolic identifiers.
+- **Session-Only History**: Calculation history is retained during the active application session and is not persisted across restarts (theme preference, view visibility, and memory value are persisted).
+- **Single-Threaded Architecture**: Expression evaluation runs synchronously on the main Qt GUI thread.
+- **Accessibility**: Screen reader navigation (`QAccessibleInterface`) is not implemented.
 
 ---
 
@@ -334,7 +382,7 @@ The application gracefully handles:
 
 ## Future Improvements
 
-- [ ] Unit tests for calculator logic
+- [x] Unit tests for calculator logic (QTestLib in `tests/`)
 - [ ] Save calculation history to file
 - [ ] Additional scientific functions (hyperbolic, constants)
 - [ ] Graph plotting capabilities
