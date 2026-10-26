@@ -170,7 +170,7 @@ Calculator/
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/qt-scientific-calculator.git
+git clone https://github.com/Rajat-Pandya/qt-scientific-calculator.git
 cd qt-scientific-calculator
 
 # Build with qmake
@@ -185,7 +185,7 @@ mingw32-make
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/qt-scientific-calculator.git
+git clone https://github.com/Rajat-Pandya/qt-scientific-calculator.git
 cd qt-scientific-calculator
 
 # Build
@@ -200,7 +200,7 @@ make
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/qt-scientific-calculator.git
+git clone https://github.com/Rajat-Pandya/qt-scientific-calculator.git
 cd qt-scientific-calculator
 
 # Build
@@ -369,10 +369,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Author
 
-**Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
-- Portfolio: [yourportfolio.com](https://yourportfolio.com)
+**Rajat Pandya**
+- GitHub: [@Rajat-Pandya](https://github.com/Rajat-Pandya)
 
 ---
 
