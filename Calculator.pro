@@ -28,9 +28,6 @@ HEADERS += \
 FORMS += \
     ui/mainwindow.ui
 
-# Resources (stylesheets, icons, etc.)
-RESOURCES += \
-    resources/calculator.qrc
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -147,9 +147,6 @@ Calculator/
 │   └── expressionparser.h        # Parser declarations
 ├── ui/                           # UI files
 │   └── mainwindow.ui             # Qt Designer layout
-├── resources/                    # Resources
-│   ├── stylesheets/              # QSS theme files
-│   └── calculator.qrc            # Resource file
 ├── screenshots/                  # Application screenshots
 ├── docs/                         # Documentation
 ├── Calculator.pro                # Qt project file

@@ -263,7 +263,6 @@ m_functions["newfunc"] = [](double x) { return customCalculation(x); };
 ### qmake Configuration
 - Cross-platform project file
 - Separate directories for source, headers, UI
-- Resource compilation for stylesheets
 
 ### Dependencies
 - Qt 6.x (Core, GUI, Widgets)
