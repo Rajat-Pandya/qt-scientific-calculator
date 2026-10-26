@@ -11,6 +11,7 @@
 </p>
 
 <p align="center">
+  <img alt="Build Status" src="https://github.com/Rajat-Pandya/qt-scientific-calculator/actions/workflows/ci.yml/badge.svg">
   <img alt="Qt Version" src="https://img.shields.io/badge/Qt-6.x-green.svg">
   <img alt="C++ Standard" src="https://img.shields.io/badge/C%2B%2B-17-blue.svg">
   <img alt="License" src="https://img.shields.io/badge/license-MIT-yellow.svg">
